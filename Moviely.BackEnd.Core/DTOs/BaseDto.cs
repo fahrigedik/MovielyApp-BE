@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Moviely.BackEnd.Core.DTOs
 {
-    public class BaseDto
+    public abstract class BaseDto
     {
         public int Id { get; set; }
 
