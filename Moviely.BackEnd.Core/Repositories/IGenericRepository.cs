@@ -10,7 +10,7 @@ namespace Moviely.BackEnd.Core.Repositories
     {
         Task<T> GetByIdAsync(int id);
 
-        List<T> GetAll();
+        Task<List<T>> GetAll();
 
         Task AddAsync(T Entity);
 
@@ -18,7 +18,7 @@ namespace Moviely.BackEnd.Core.Repositories
 
         void Delete(T Entity);
 
-        Task<List<T>> FindByForeignIdEnties(int id);
+       // Task<List<T>> FindByForeignIdEnties(int id); Bu fonksiyon ICommentRepoda olmalı.
 
 
     }

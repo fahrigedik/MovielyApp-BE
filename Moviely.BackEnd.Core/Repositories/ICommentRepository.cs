@@ -10,5 +10,7 @@ namespace Moviely.BackEnd.Core.Repositories
     public interface ICommentRepository : IGenericRepository<Comment>
     {
 
+        public List<Comment> GetCommentsByMovieId(int id);
+
     }
 }
