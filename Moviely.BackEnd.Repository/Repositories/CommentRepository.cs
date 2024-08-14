@@ -21,5 +21,7 @@ namespace Moviely.BackEnd.Repository.Repositories
             var data = _context.Comments.Where(x => x.movieId == id).ToList();
             return data;
         }
+
+       
     }
 }

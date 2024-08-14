@@ -1,0 +1,6 @@
+@Moviely.BackEnd.API_HostAddress = http://localhost:5217
+
+GET {{Moviely.BackEnd.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

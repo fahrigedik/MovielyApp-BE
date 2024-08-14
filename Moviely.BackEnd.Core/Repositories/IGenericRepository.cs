@@ -8,15 +8,15 @@ namespace Moviely.BackEnd.Core.Repositories
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<T> GetByIdAsync(int id);
+        public Task<T> GetByIdAsync(int id);
 
-        Task<List<T>> GetAll();
+        public List<T> GetAll();
 
-        Task AddAsync(T Entity);
+        public Task AddAsync(T Entity);
 
-        void Update(T Entity);
+        public void Update(T Entity);
 
-        void Delete(T Entity);
+        public void Delete(T Entity);
 
        // Task<List<T>> FindByForeignIdEnties(int id); Bu fonksiyon ICommentRepoda olmalı.
 

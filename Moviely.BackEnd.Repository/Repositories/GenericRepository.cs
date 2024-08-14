@@ -35,9 +35,9 @@ namespace Moviely.BackEnd.Repository.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<List<T>> GetAll()
+        public List<T> GetAll()
         {
-            var data = await _dbSet.ToListAsync();
+            var data = _dbSet.ToList();
             return data;
         }
 
@@ -51,5 +51,7 @@ namespace Moviely.BackEnd.Repository.Repositories
         {
             _dbSet.Update(Entity);
         }
+
+       
     }
 }
