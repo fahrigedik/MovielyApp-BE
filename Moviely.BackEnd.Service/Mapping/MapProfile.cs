@@ -17,6 +17,7 @@ namespace Moviely.BackEnd.Service.Mapping
             CreateMap<Comment, CommentDto>();
             CreateMap<CommentDto, Comment>();
 
+
         }
     }
 }

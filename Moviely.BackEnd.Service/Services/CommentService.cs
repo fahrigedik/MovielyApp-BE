@@ -20,9 +20,9 @@ namespace Moviely.BackEnd.Service.Services
             _commentRepository = commentRepository;
         }
 
-        public List<Comment> GetCommentsByMovieId(int id)
+        public async Task<List<Comment>> GetCommentsByMovieId(int id)
         {
-           return _commentRepository.GetCommentsByMovieId(id);
+           return await _commentRepository.GetCommentsByMovieId(id);
         }
     }
 }

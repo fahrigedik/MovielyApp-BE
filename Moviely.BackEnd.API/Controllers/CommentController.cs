@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moviely.BackEnd.Core.DTOs;
 using Moviely.BackEnd.Core.Entities;
 using Moviely.BackEnd.Core.Services;
+using System.Runtime.InteropServices;
 
 namespace Moviely.BackEnd.API.Controllers
 {
@@ -37,7 +38,7 @@ namespace Moviely.BackEnd.API.Controllers
 
 
 
-        [HttpGet]
+        [HttpGet("[action]")]
         public async Task<IActionResult> GelAll()
         {
 
@@ -51,7 +52,7 @@ namespace Moviely.BackEnd.API.Controllers
         [HttpGet("Movie/{id}")]
         public async Task<IActionResult> GetCommentsByMovieId(int id)
         {
-            var comments = _commentService.GetCommentsByMovieId(id);
+            var comments = await _commentService.GetCommentsByMovieId(id);
             var commentsDtos = _mapper.Map<List<CommentDto>>(comments);
 
             return CreateActionResult<List<CommentDto>>(CustomResponseDto<List<CommentDto>>.Success(200, commentsDtos));

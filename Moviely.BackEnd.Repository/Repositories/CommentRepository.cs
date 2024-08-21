@@ -1,4 +1,5 @@
-﻿using Moviely.BackEnd.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Moviely.BackEnd.Core.Entities;
 using Moviely.BackEnd.Core.Repositories;
 using Moviely.BackEnd.Repository.Context;
 using System;
@@ -16,9 +17,9 @@ namespace Moviely.BackEnd.Repository.Repositories
 
         }
 
-        public List<Comment> GetCommentsByMovieId(int id)
+        public async Task<List<Comment>> GetCommentsByMovieId(int id)
         {
-            var data = _context.Comments.Where(x => x.movieId == id).ToList();
+            var data = await _context.Comments.Where(x=>x.movieId==id).ToListAsync();
             return data;
         }
 

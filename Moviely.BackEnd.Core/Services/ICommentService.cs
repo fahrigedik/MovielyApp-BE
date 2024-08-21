@@ -9,6 +9,6 @@ namespace Moviely.BackEnd.Core.Services
 {
     public interface ICommentService : IService<Comment>
     {
-        public List<Comment> GetCommentsByMovieId(int id);
+        public Task<List<Comment>> GetCommentsByMovieId(int id);
     }
 }
